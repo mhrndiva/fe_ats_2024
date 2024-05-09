@@ -1,10 +1,7 @@
-import { get } from "https://bukulapak.github.io/api/process.js";
 import { addInner } from "https://bukulapak.github.io/element/process.js";
 import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
-import { isiTabel } from "./table.js";
-let urlAPI = "https://ws-ats-714220050-cc57ecdf5b73.herokuapp.com/mahasiswa";
-get(urlAPI, getallmahasiswa);
-function getallmahasiswa(results) {
+import { isiTabel } from "../temp/table.js";
+export function getallmahasiswa(results) {
     results.forEach(isiRow);
 }
 function isiRow(value) {
