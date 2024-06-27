@@ -1,6 +1,6 @@
 export let isiTabel = 
 `
-<tr class="h-18 border-b border-coolGray-100">
+<tr class="g-gray-800">
 <th class="whitespace-nowrap px-4 bg-white text-left">
   <div class="flex items-center -m-2">
     <div class="w-auto p-2">
