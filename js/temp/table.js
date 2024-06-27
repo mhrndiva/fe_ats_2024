@@ -22,6 +22,13 @@ export let isiTabel =
   #NomorHp#</th>
 <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">
   #Jurusan#</th>
+  <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
+    <a type="button" href="edit.html?presensiId=#IDEDIT#"> Edit
+    </a>
+    |
+    <button type="button" id="del_button" onclick="deleteData('#IDHAPUS#')"> Delete
+    </button>
+</th>
 <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
   <svg class="ml-auto" width="16" height="16" viewbox="0 0 16 16" fill="none"
     xmlns="http://www.w3.org/2000/svg">
