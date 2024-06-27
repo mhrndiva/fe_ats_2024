@@ -11,12 +11,49 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../shuffle-for-tailwind.png">
   <script src="../js/main.js"></script>
   <script type="module" src="../js/fetch.js"></script>
+
+  <style>
+    .bg-gradient {
+      background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+    }
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .custom-button {
+      background: #ff7e5f;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition: 0.3s;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .custom-button:hover {
+      background: #feb47b;
+      background: linear-gradient(to right, #feb47b, #ff7e5f);
+    }
+  </style>
 </head>
 
 <body class="antialiased bg-body text-body font-body">
   <div class="">
 
     <section class="overflow-hidden min-h-full">
+      <div class="text-center mb-8">
+        <img src="flex-ui-assets/logos/dashboard/flex-ui-green.svg" alt="" class="mx-auto mb-4">
+        <h1 class="text-4xl font-bold text-shadow">Welcome to Our Dashboard</h1>
+        <p class="text-lg mt-2 text-shadow">Your one-stop solution for managing your projects</p>
+      </div>
+      <div>
+        <button class="custom-button">Get Started</button>
+        <button class="custom-button">Learn More</button>
+      </div>
       <div class="relative z-50 flex items-center justify-between xl:hidden bg-coolGray-900 px-8 py-5 -mx-3">
         <div class="w-auto px-3">
           <a class="block max-w-max" href="#">
@@ -374,30 +411,28 @@
         </div> -->
         <div>
           <div class="container mx-auto">
-            <section class="bg-coolGray-50 py-4">
-              <div class="container px-4 mx-auto">
-                <div class="relative py-11 px-16 bg-coolGray-900 rounded-md overflow-hidden">
-                  <img class="absolute z-10 left-4 top-4"
-                    src="flex-ui-assets/elements/dashboard/banners/dots-purple.svg" alt="">
-                  <img class="absolute z-10 right-4 bottom-4"
-                    src="flex-ui-assets/elements/dashboard/banners/dots-red.svg" alt="">
-                  <img class="absolute h-64 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
-                    src="flex-ui-assets/elements/dashboard/banners/wave.svg" alt="">
-                  <div class="relative z-20 flex flex-wrap items-center -m-3">
-                    <div class="w-full md:w-1/2 p-3">
-                      <h2 class="mb-6 text-4xl font-bold text-white tracking-tighter">Kemahasiswaan</h2>
-                      <p class="font-semibold text-coolGray-300">Ayo Rajin Belajar</p>
+            <section class="bg-gradient-to-r from-purple-500 to-blue-500 py-4">
+                <div class="container px-4 mx-auto">
+                    <div class="relative py-11 px-16 bg-coolGray-900 rounded-lg shadow-xl overflow-hidden">
+                        <img class="absolute z-10 left-4 top-4" src="flex-ui-assets/elements/dashboard/banners/dots-purple.svg" alt="">
+                        <img class="absolute z-10 right-4 bottom-4" src="flex-ui-assets/elements/dashboard/banners/dots-red.svg" alt="">
+                        <img class="absolute h-64 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover" src="flex-ui-assets/elements/dashboard/banners/wave.svg" alt="">
+                        <div class="relative z-20 flex flex-wrap items-center -m-3">
+                            <div class="w-full md:w-1/2 p-3">
+                                <h2 class="mb-6 text-4xl font-extrabold text-white tracking-tighter">Kemahasiswaan</h2>
+                                <p class="font-semibold text-coolGray-300">Ayo Rajin Belajar</p>
+                            </div>
+                            <div class="w-full md:w-1/2 p-3">
+                                <button class="block md:ml-auto px-7 py-4 font-medium text-lg text-white bg-green-500 hover:bg-green-600 rounded-lg transition-transform transform hover:scale-105 shadow-lg">
+                                    Get Started
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w-full md:w-1/2 p-3">
-                      <button
-                        class="block md:ml-auto px-7 py-4 font-medium text-lg text-white bg-green-500 hover:bg-green-600 rounded-md">Get
-                        Started</button>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </section>
-
+        </div>
+        
             <section class="bg-coolGray-50 py-4">
               <div class="container px-4 mx-auto">
                 <div class="flex flex-wrap items-center justify-between -m-2 mb-4">
