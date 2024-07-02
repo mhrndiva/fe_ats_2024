@@ -37,9 +37,9 @@
 import { get as getProcess } from "https://bukulapak.github.io/api/process.js";
 import { getallmahasiswa } from "./controller/get.js";
 import { urlAPI } from "./config/url.js";
+import { urlAPI as urlPresensiAPI } from "./config/url_presensi.js";
 getProcess(urlAPI, getallmahasiswa);
 
-import { get as getProcessPresensi } from "https://bukulapak.github.io/api/process.js";
-import { getallpresensi } from "./controller/get.js";
-import { urlAPI as urlPresensiAPI } from "./config/url_presensi.js";
+
+
 getProcessPresensi(urlPresensiAPI, getallpresensi);
