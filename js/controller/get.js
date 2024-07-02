@@ -6,12 +6,15 @@ export function getallmahasiswa(results) {
 }
 function isiRow(value) {
     console.log("Value:", value); // Tampilkan nilai value di konsol
-    if (value && value.nama && value.phone_number && value.jabatan && value._id) {
+    if (value && value.nama && value.npm && value.jurusan && value.phone_number && value.email && value.alamat  && value._id) {
         let content = 
             isiTabel.replace("#ID#", value._id)
                     .replace("#Nama#", value.nama)
+                    .replace("#NPM#", value.npm)
+                    .replace("#Jurusan#", value.jurusan)
                     .replace("#NomorHp#", value.phone_number)
-                    .replace("#Jurusan#", value.jabatan)
+                    .replace("#Email#", value.email)
+                    .replace("#Alamat#", value.alamat)
                     .replace("#WARNA#", getRandomColor())
                     .replace(/#WARNALOGO#/g, getRandomColorName());
         addInner("iniTabel", content);
