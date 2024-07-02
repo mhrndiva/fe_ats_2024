@@ -13,7 +13,8 @@ function pushData(){
         },
         biodata : {
             nama : getValue("nama"),
-            jurusan : getValue("jurusan"),
+            npm : getValue("npm"),
+            jurusan : getValue("jurusan")
         },
         checkin : getValue("checkin"),
     }
