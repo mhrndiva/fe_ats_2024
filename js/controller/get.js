@@ -6,7 +6,7 @@ export function getallmahasiswa(results) {
 }
 function isiRow(value) {
     console.log("Value:", value); // Tampilkan nilai value di konsol
-    if (value && value.nama && value.npm && value.jurusan && value.phone_number && value.email && value.alamat  && value._id) {
+    if (value && value.nama && value.phone_number && value._id) {
         let content = 
             isiTabel.replace("#ID#", value._id)
                     .replace("#Nama#", value.nama)
