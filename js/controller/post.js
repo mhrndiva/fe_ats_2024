@@ -6,14 +6,13 @@ import { urlPOST, AmbilResponse} from "../config/url_post.js";
 function pushData(){
 
     let data = {
-        npm : getValue("npm"),
         matkul : {
             namamatkul : getValue("namamatkul"),
             dosen : getValue("dosen")
         },
         biodata : {
             nama : getValue("nama"),
-            npm : getValue("npm"),
+            npm: parseInt(getValue("npm"), 10),
             jurusan : getValue("jurusan")
         },
         checkin : getValue("checkin"),
