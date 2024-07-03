@@ -34,13 +34,10 @@
 //     }
 // }
 
-import { get as getProcess } from "https://bukulapak.github.io/api/process.js";
+import { get } from "https://bukulapak.github.io/api/process.js";
 import { getallmahasiswa } from "./controller/get.js";
 import { urlAPI } from "./config/url.js";
 import { urlAPI as urlPresensiAPI } from "./config/url_presensi.js";
-function handleError(error) {
-    console.error("Error occurred:", error);
-}
 getProcess(urlAPI, getallmahasiswa);
 
 
