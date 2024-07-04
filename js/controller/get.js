@@ -1,7 +1,7 @@
 import { addInner } from "https://bukulapak.github.io/element/process.js";
 import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
 import { isiTabel } from "../temp/table.js";
-export function isiTabelMahasiswa(results) {
+export function getallmahasiswa(results) {
     results.forEach(isiRow);
 }
 function isiRow(value) {

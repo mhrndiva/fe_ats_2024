@@ -1,12 +1,21 @@
-export async function getallpresensi() {
-    try {
-        const response = await fetch('/api/presensi');  // Sesuaikan URL dengan endpoint API presensi Anda
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return await response.json();
-    } catch (error) {
-        console.error('Failed to fetch presensi:', error);
-        throw error;
-    }
+import { addInner } from "https://bukulapak.github.io/element/process.js";
+import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
+import { isiTabel } from "../temp/presensi.js";
+
+export function getallpresensi(results) {
+    results.forEach(isiRow);
+}
+
+function isiRow(value) {
+    let content = isiTabel
+        .replace("#ID#", value._id)
+        .replace("#Nama#", value.biodata.nama)
+        .replace("#NPM#", value.biodata.npm)
+        .replace("#Jurusan#", value.biodata.jurusan)
+        .replace("#Matkul#", value.matkul.namamatkul)
+        .replace("#Dosen#", value.matkul.dosen)
+        .replace("#Kehadiran#", value.checkin)
+        .replace("#WARNA#", getRandomColor())
+        .replace(/#WARNALOGO#/g, getRandomColorName());
+    addInner("iniTabel", content);
 }
