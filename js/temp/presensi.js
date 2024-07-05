@@ -1,4 +1,3 @@
-// Ekspor template tabel
 export let isiTabel = `
 <tr class="g-gray-800">
   <th class="whitespace-nowrap px-4 bg-white text-left">
