@@ -3,6 +3,7 @@ import { onClick, getValue } from "https://bukulapak.github.io/element/process.j
 import { urlPUT, AmbilResponse} from "../config/url_put.js";
 
 
+
 function pushData(){
 
     let data = {
@@ -17,8 +18,8 @@ function pushData(){
         },
         checkin : getValue("checkin"),
     }
-    postData(urlPUT, data, AmbilResponse);
+    putData(urlPUT, data, AmbilResponse);
 
 }
 
-onClick("button", pushData);
+onClick("button", pushData);
