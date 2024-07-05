@@ -17,7 +17,7 @@ function pushData(){
         },
         checkin : getValue("checkin"),
     }
-    postData(urlPOST, data, AmbilResponse);
+    postData(urlPUT, data, AmbilResponse);
 
 }
 
