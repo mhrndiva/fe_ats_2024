@@ -4,7 +4,6 @@ import { urlPOST, AmbilResponse} from "../config/url_post.js";
 
 
 function pushData(){
-
     let data = {
         matkul : {
             namamatkul : getValue("namamatkul"),
@@ -22,3 +21,4 @@ function pushData(){
 }
 
 onClick("button", pushData);
+
