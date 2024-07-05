@@ -15,6 +15,8 @@ function isiRow(value) {
         .replace("#Matkul#", value.matkul.namamatkul)
         .replace("#Dosen#", value.matkul.dosen)
         .replace("#Kehadiran#", value.checkin)
+        .replace("#IDEDIT#", value._id)
+        .replace("#IDHAPUS#", value._id)
         .replace("#WARNA#", getRandomColor())
         .replace(/#WARNALOGO#/g, getRandomColorName());
     addInner("iniTabel", content);
