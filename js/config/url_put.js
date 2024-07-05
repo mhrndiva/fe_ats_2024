@@ -6,5 +6,5 @@ export let urlPUT = "https://ws-ats-714220050-cc57ecdf5b73.herokuapp.com/update/
 export function AmbilResponse(result) {
     console.log(result); //menampilkan response API pada console
     alert(result.message); //menampilkan response API pada alert
-    window.location.href = "index.html"; //reload halaman setelah klik ok pada alert
+    window.location.href = "presensi.html"; //reload halaman setelah klik ok pada alert
 }
