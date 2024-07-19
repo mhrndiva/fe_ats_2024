@@ -8,7 +8,7 @@ export function getallpresensi(results) {
 
 function isiRow(value) {
     let content = isiTabel
-        .replace("#ID#", value._id)
+        //.replace("#ID#", value._id)
         .replace("#Nama#", value.biodata.nama)
         .replace("#NPM#", value.biodata.npm)
         .replace("#Jurusan#", value.biodata.jurusan)
