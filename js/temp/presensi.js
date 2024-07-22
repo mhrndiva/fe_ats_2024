@@ -3,9 +3,12 @@ export let isiTabel = `
   
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#Nama#</th>
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#NPM#</th>
+  <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#EMAIL#</th>
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#Jurusan#</th>
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#Matkul#</th>
+  <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#SKS#</th>
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#Dosen#</th>
+  <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#Jadwal#</th>
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#Kehadiran#</th>
   <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
     <a type="button" href="edit.html?presensiId=#IDEDIT#"> Edit

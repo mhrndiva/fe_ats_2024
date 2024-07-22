@@ -11,6 +11,7 @@ function isiRow(value) {
         //.replace("#ID#", value._id)
         .replace("#Nama#", value.biodata.nama)
         .replace("#NPM#", value.biodata.npm)
+        .replace("")
         .replace("#Jurusan#", value.biodata.jurusan)
         .replace("#Matkul#", value.matkul.namamatkul)
         .replace("#Dosen#", value.matkul.dosen)

@@ -2,9 +2,12 @@ export function isiData(results) {
     const inputMapping = [
       { id: 'nama', path: 'biodata.nama' },
       { id: 'npm', path: 'biodata.npm' },
+      { id: 'email', path: 'biodata.email' },
       { id: 'jurusan', path: 'biodata.jurusan' },
       { id: 'namamatkul', path: 'matkul.namamatkul' },
+      { id: 'sks', path: 'matkul.sks' },
       { id: 'dosen', path: 'matkul.dosen' },
+      { id: 'jadwal', path: 'matkul.jadwal' },
       { id: 'checkin', path: 'checkin' },
     ];
   

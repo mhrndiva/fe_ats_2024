@@ -9,11 +9,14 @@ function pushData(){
     let data = {
         matkul : {
             namamatkul : getValue("namamatkul"),
-            dosen : getValue("dosen")
+            sks : parseInt(getValue("sks"), 10),
+            dosen : getValue("dosen"),
+            jadwal : getValue("jadwal")
         },
         biodata : {
             nama : getValue("nama"),
             npm: parseInt(getValue("npm"), 10),
+            email: getValue("email"),
             jurusan : getValue("jurusan")
         },
         checkin : getValue("checkin"),
