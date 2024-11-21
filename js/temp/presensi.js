@@ -3,6 +3,7 @@ export let isiTabel = `
   
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#Nama#</th>
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#NPM#</th>
+  <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#DATETIME#</th>
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#Jurusan#</th>
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#Matkul#</th>
   <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#Dosen#</th>
