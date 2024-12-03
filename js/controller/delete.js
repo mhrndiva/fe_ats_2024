@@ -1,7 +1,7 @@
-function deleteData(IDHAPUS) {
+export function deleteData(IDHAPUS) {
     var presensiId = IDHAPUS;
-    var target_url = "https://ws-ats-714220050-cc57ecdf5b73.herokuapp.com/delete/" + presensiId;
-
+    var target_url = "http://ws-deviwlndr-59b3a0157dd7.herokuapp.com/delete/" + presensiId;
+    
     var requestOptions = {
         method: 'DELETE',
         redirect: 'follow'
@@ -14,10 +14,4 @@ function deleteData(IDHAPUS) {
             location.reload();
         })
         .catch(error => console.log('Error:', error));
-}
-
-function confirmDelete(IDHAPUS) {
-    if (confirm("Apakah ingin menghapus data ID " + IDHAPUS + "?")) {
-        deleteData(IDHAPUS);
-    }
 }

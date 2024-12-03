@@ -1,14 +1,12 @@
 export function isiData(results) {  
     const inputMapping = [
-      { id: 'nama', path: 'biodata.nama' },
-      { id: 'npm', path: 'biodata.npm' },
-      { id: 'email', path: 'biodata.email' },
-      { id: 'jurusan', path: 'biodata.jurusan' },
-      { id: 'namamatkul', path: 'matkul.namamatkul' },
-      { id: 'sks', path: 'matkul.sks' },
-      { id: 'dosen', path: 'matkul.dosen' },
-      { id: 'jadwal', path: 'matkul.jadwal' },
-      { id: 'checkin', path: 'checkin' },
+      { id: 'nama', path: 'mahasiswa.nama' },
+      { id: 'npm', path: 'mahasiswa.npm' },
+      { id: 'email', path: 'mahasiswa.email' },
+      { id: 'jurusan', path: 'mahasiswa.jurusan' },
+      { id: 'phone_number', path: 'mahasiswa.phone_number' },
+      { id: 'alamat', path: 'mahasiswa.alamat' },
+      { id: 'poin', path: 'mahasiswa.poin' },
     ];
   
     inputMapping.forEach(({ id, path, index, property }) => {

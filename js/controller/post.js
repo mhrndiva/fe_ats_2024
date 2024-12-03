@@ -2,19 +2,28 @@ import { postData } from "https://bukulapak.github.io/api/process.js";
 import { getValue } from "https://bukulapak.github.io/element/process.js";
 import { urlPOST, AmbilResponse } from "../config/url_post.js";
 
+// Fungsi validasi email
 function isValidEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
 
+// Fungsi validasi huruf saja
 function isAlphabetic(str) {
     const re = /^[A-Za-z\s]+$/;
     return re.test(str);
 }
 
+// Fungsi validasi huruf dan angka
 function isAlphaNumeric(str) {
     const re = /^[A-Za-z0-9\s]+$/;
     return re.test(str);
+}
+
+// Fungsi validasi nomor telepon
+function isValidPhoneNumber(phone_number) {
+    const re = /^[0-9]{10,15}$/; // Menggunakan format nomor telepon standar
+    return re.test(phone_number);
 }
 
 function pushData() {
@@ -22,14 +31,12 @@ function pushData() {
     let npm = getValue("npm");
     let email = getValue("email");
     let jurusan = getValue("jurusan");
-    let namamatkul = getValue("namamatkul");
-    let sks = getValue("sks");
-    let dosen = getValue("dosen");
-    let jadwal = getValue("jadwal");
-    let checkin = getValue("checkin");
+    let phone_number = getValue("phone_number");
+    let alamat = getValue("alamat");
+    let poin = getValue("poin");
 
     // Validasi semua kolom harus diisi
-    if (!nama || !npm || !email || !jurusan || !namamatkul || !sks || !dosen || !jadwal || !checkin) {
+    if (!nama || !npm || !email || !jurusan || !phone_number || !alamat) {
         alert("Semua kolom harus diisi!");
         return;
     }
@@ -41,6 +48,7 @@ function pushData() {
     }
 
     // Validasi NPM harus berupa angka
+    npm = parseInt(npm);
     if (isNaN(npm)) {
         alert("NPM harus berupa angka!");
         return;
@@ -58,47 +66,32 @@ function pushData() {
         return;
     }
 
-    // Validasi format nama mata kuliah
-    if (!isAlphaNumeric(namamatkul)) {
-        alert("Nama Mata Kuliah hanya boleh berisi huruf, angka, dan spasi!");
+    // Validasi nomor telepon
+    if (!isValidPhoneNumber(phone_number)) {
+        alert("Nomor telepon tidak valid!");
         return;
     }
 
-    // Validasi SKS harus berupa angka
-    if (isNaN(sks)) {
-        alert("SKS harus berupa angka!");
+    poin = parseInt(poin);
+    if (isNaN(poin)) {
+        alert("Poin harus berupa angka!");
         return;
     }
 
-    // Validasi format dosen
-    if (!isAlphabetic(dosen)) {
-        alert("Nama Dosen hanya boleh berisi huruf dan spasi!");
-        return;
-    }
-
-    // Validasi format jadwal (disesuaikan dengan format yang diinginkan)
-    if (!isAlphaNumeric(jadwal)) {
-        alert("Jadwal hanya boleh berisi huruf, angka, dan spasi!");
-        return;
-    }
-
-    let data = {
-        matkul: {
-            namamatkul: namamatkul,
-            sks: parseInt(sks, 10),
-            dosen: dosen,
-            jadwal: jadwal
-        },
-        biodata: {
-            nama: nama,
-            npm: parseInt(npm, 10),
-            jurusan: jurusan,
-            email: email
-        },
-        checkin: checkin
+    // Data untuk dikirim ke server
+    const data = {
+        nama: nama,
+        npm: npm,
+        email: email,
+        jurusan: jurusan,
+        phone_number: phone_number,
+        alamat: alamat,
+        poin: poin
     };
 
+    // Kirim data ke server
     postData(urlPOST, data, AmbilResponse);
 }
 
+// Event listener untuk tombol
 document.getElementById("button").addEventListener("click", pushData);
