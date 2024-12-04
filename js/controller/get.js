@@ -18,6 +18,8 @@ function isiRow(value) {
         .replace("#Email#", value.email)
         .replace("#Alamat#", value.alamat)
         .replace("#Poin#", value.poin)
+        .replace("#NPMHAPUS#", value.npm)
+        .replace("#NPMEDIT#", value.npm)
         .replace("#WARNA#", getRandomColor())
         .replace(/#WARNALOGO#/g, getRandomColorName());
 
