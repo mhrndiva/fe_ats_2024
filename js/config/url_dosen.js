@@ -1,0 +1,1 @@
+export let urlAPI = "https://ws-deviwlndr-59b3a0157dd7.herokuapp.com/dosen";
